@@ -1,0 +1,31 @@
+.hero-header {
+  color: $white;
+  text-align: center;
+  padding: rem-calc(210px) 0 rem-calc(250px);
+  position: relative;
+  &.bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      background-color: rgba($primary-color, 0.5);
+      z-index: 0;
+    }
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+  h1 {
+    margin-bottom: rem-calc(20px);
+  }
+  h4 {
+    margin: 0;
+  }
+}

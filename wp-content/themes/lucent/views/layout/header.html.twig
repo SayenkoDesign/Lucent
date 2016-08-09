@@ -1,0 +1,16 @@
+<section class="hero-header {% if SP.ACF.get_field('background_image') %}bg-image{% else %}bg-primary{% endif %}" {% if SP.ACF.get_field('background_image') %}style="background-image: url('{{ SP.ACF.get_field('background_image').url }}')"{% endif %}>
+    <div class="content">
+        <h1>
+            {% if SP.ACF.get_field('overide_title') %}
+                {{  SP.ACF.get_field('overide_title') }}
+            {% elseif title is defined %}
+                {{ title }}
+            {% else %}
+                {{ SP.WordPress.title() }}
+            {% endif %}
+        </h1>
+        {% if SP.ACF.get_field('subtitle') %}
+            <h4>{{ SP.ACF.get_field('subtitle') }}</h4>
+        {% endif %}
+    </div>
+</section>
