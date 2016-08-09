@@ -7,3 +7,8 @@
 @import "layout/header";
 
 @import "panels/icons";
+@import "panels/secondary-content";
+
+h1, h2 {
+  color: $primary-color;
+}

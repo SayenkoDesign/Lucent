@@ -48,10 +48,11 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
+$large-font-size: rem-calc(21px);
 $foundation-palette: (
   primary: #0e73a3,
   accent: #00a651,
-  secondary: #777,
+  secondary: #f0f1f1,
   success: #00a651,
   warning: #ffae00,
   alert: #ec5840,

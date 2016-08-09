@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-    <section class="content">
-        <div class="row column">
-            {% if rows %}
-                {% for row in rows %}
-                    {{ row }}
-                {% endfor %}
-            {% else %}
+    {% if rows %}
+        {% for row in rows %}
+            {{ row }}
+        {% endfor %}
+    {% else %}
+        <section class="content">
+            <div class="row column">
                 {{ SP.WordPress.content() }}
-            {% endif %}
-        </div>
-    </section>
+            </div>
+        </section>
+    {% endif %}
 {% endblock %}
