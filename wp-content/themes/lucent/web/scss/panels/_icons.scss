@@ -1,0 +1,15 @@
+section.icons {
+  padding: $global-padding*4 0;
+  h4 {
+    margin-bottom: $global-margin*2;
+  }
+  h3 {
+    margin-bottom: $global-margin*2;
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+    }
+  }
+  img {
+    margin-bottom: $global-margin;
+  }
+}

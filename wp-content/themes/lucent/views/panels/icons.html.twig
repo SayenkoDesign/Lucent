@@ -1,0 +1,18 @@
+<section class="icons text-center">
+    <div class="row">
+        <div class="column">
+            <h2 class="text-primary">{{ SP.ACF.get_sub_field('title') }}</h2>
+            <h4>{{ SP.ACF.get_sub_field('subtitle') }}</h4>
+        </div>
+    </div>
+    <div class="row">
+        {% for icon in SP.ACF.get_sub_field('icons') %}
+            <div class="small-12 medium-4 columns">
+                <a href="{{ icon.url }}" class="icon">
+                    <img src="{{ icon.image.url }}" alt="{{ icon.title }}">
+                    <h3>{{ icon.title }}</h3>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>

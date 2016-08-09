@@ -1,7 +1,9 @@
 @import "settings";
 @import "font-awesome";
 @import "foundation";
-@include foundation-everything();
+@include foundation-everything(true);
 @import "supertheme";
 
 @import "layout/header";
+
+@import "panels/icons";

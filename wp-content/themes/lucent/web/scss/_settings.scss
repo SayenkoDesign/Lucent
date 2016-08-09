@@ -49,9 +49,10 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
+  primary: #0e73a3,
+  accent: #00a651,
   secondary: #777,
-  success: #3adb76,
+  success: #00a651,
   warning: #ffae00,
   alert: #ec5840,
 );
@@ -109,17 +110,9 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 24,
-    'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
-  ),
-  medium: (
     'h1': 40,
     'h2': 36,
-    'h3': 28,
+    'h3': 30,
     'h4': 22,
     'h5': 20,
     'h6': 16,
@@ -140,7 +133,7 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
+$anchor-color: map-get($foundation-palette, accent);
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;

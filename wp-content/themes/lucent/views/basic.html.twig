@@ -2,7 +2,13 @@
 {% block content %}
     <section class="content">
         <div class="row column">
-            {{ SP.WordPress.content() }}
+            {% if rows %}
+                {% for row in rows %}
+                    {{ row }}
+                {% endfor %}
+            {% else %}
+                {{ SP.WordPress.content() }}
+            {% endif %}
         </div>
     </section>
 {% endblock %}
