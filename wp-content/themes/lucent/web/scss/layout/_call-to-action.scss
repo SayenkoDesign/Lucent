@@ -1,0 +1,23 @@
+.call-to-action {
+  padding: $global-padding*4 0;
+  text-align: center;
+  background-size: cover;
+  h2 {
+    color: $white;
+    text-transform: uppercase;
+    @include breakpoint(large) {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+  .button {
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+    font-size: rem-calc(18px);
+    @include breakpoint(large) {
+      top: -8px;
+      margin-left: $global-margin*2;
+    }
+  }
+}
