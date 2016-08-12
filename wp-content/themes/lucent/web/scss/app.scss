@@ -8,7 +8,12 @@
 
 @import "panels/icons";
 @import "panels/secondary-content";
+@import "panels/logos";
 
 h1, h2 {
   color: $primary-color;
+}
+
+h2+h4 {
+    margin-bottom: $global-margin*2;
 }
