@@ -1,0 +1,54 @@
+.footer {
+  background-color: $dark-gray;
+  color: $light-gray;
+  padding: $global-padding*2 0;
+  .large-order-2 .row {
+    margin-bottom: $global-margin;
+    @include breakpoint(large) {
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      margin-bottom: 0;
+    }
+  }
+  a {
+    color: $light-gray;
+    &:hover {
+      color: $white;
+    }
+  }
+  .fa {
+    border:2px solid $light-gray;
+    padding: rem-calc(4px);
+    border-radius: 100%;
+    margin-bottom: $global-margin;
+    &:hover {
+      border-color: $white;
+    }
+  }
+  .menu {
+    a {
+      padding: 0;
+      text-transform: uppercase;
+      margin-bottom: $global-margin;
+      display: none;
+      @include breakpoint(medium) {
+        margin-right: $global-padding*2;
+        display: block;
+      }
+      @include breakpoint(large) {
+        margin-right: $global-padding*4;
+        margin-top: 0;
+      }
+    }
+  }
+  p {
+    margin: 0;
+  }
+  small {
+    font-size: rem-calc(14px);
+    a {
+      text-decoration: underline;
+    }
+  }
+}
