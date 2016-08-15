@@ -1,0 +1,51 @@
+<header data-sticky-container>
+    <div class="title-bar" data-sticky data-options="marginTop:0;">
+        <div class="row align-middle" id="large-menu">
+            <div class="shrink columns">
+                <a href="{{ url }}" class="">
+                    <img src="{{ SP.ACF.get_field('white_logo', 'option').url }}" class="white-logo">
+                    <img src="{{ SP.ACF.get_field('color_logo', 'option').url }}" class="color-logo">
+                </a>
+            </div>
+            <div class="columns">
+                {{
+                    SP.WordPRess.menu({
+                        'container': false,
+                        'theme_location': "primary_menu",
+                        'items_wrap': '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+                        'walker': walkers.dropdown,
+                        'menu_id': '',
+                        'menu_class': 'dropdown menu'
+                    })
+                }}
+            </div>
+        </div>
+        <div id="small-menu-bar" class="small-12 columns" data-responsive-toggle="small-menu" data-hide-for="medium">
+            <div class="row align-middle hide-for-medium">
+                <div class="columns">
+                    <a href="{{ url }}" class="">
+                        <img src="{{ SP.ACF.get_field('color_logo', 'option').url }}" class="small-logo">
+                    </a>
+                </div>
+                <div class="columns shrink">
+                    <a href="" class="phone"><i class="fa fa-phone"></i></a>
+                    <a class="" data-toggle><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="small-menu" class="small-12 columns">
+            <div class="hide-for-medium">
+                <ul class="vertical menu" data-accordion-menu>
+                    <li>
+                        <a href="#">Item 1</a>
+                        <ul class="menu vertical nested">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Item 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

@@ -12,3 +12,10 @@ $container->setParameter('WP_DEBUG', WP_DEBUG);
 
 $loader = new YamlFileLoader($container, new FileLocator(get_template_directory()));
 $loader->load('app/config/config.yml');
+
+/** @var \Twig_Environment $twig */
+$twig = $container->get('twig.environment');
+$twig->addGlobal('url', get_site_url());
+$twig->addGlobal('walkers', [
+    'dropdown' => new \Supertheme\WordPress\DropDownMenuWalker(),
+]);

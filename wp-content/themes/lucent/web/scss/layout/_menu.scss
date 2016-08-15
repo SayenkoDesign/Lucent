@@ -1,0 +1,146 @@
+.sticky-container {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.title-bar {
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 1s;
+  @include breakpoint(small only){
+    background-color: $white;
+  }
+  &.is-stuck {
+    background-color: $white;
+  }
+  // menu
+  .dropdown.menu {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  a {
+    color: $white;
+    font-size: rem-calc(18px);
+    text-transform: uppercase;
+    &:hover {
+      color: $anchor-color-hover;
+      text-decoration: underline;
+    }
+    @include breakpoint(small only){
+      color: $body-font-color;
+      &:hover {
+        color: $anchor-color-hover;
+      }
+    }
+  }
+  &.is-stuck a {
+    color: $body-font-color;
+    &:hover {
+      color: $anchor-color-hover;
+    }
+  }
+  // font awesome icons
+  .fa {
+    font-size: rem-calc(32px);
+    margin-left: $global-margin;
+  }
+  //drop down menu
+  .dropdown.menu li.is-dropdown-submenu-parent > a::after {
+    border-color: $white transparent transparent;
+  }
+
+  &.is-stuck .dropdown.menu li.is-dropdown-submenu-parent > a::after {
+    border-color: $body-font-color transparent transparent;
+  }
+  .submenu {
+    background-color: $light-gray;
+    a {
+      color: $body-font-color;
+      font-size: rem-calc(16px);
+      text-transform: none;
+      padding: $global-padding $global-padding*1.5;
+      &:hover {
+        color: $anchor-color-hover;
+      }
+    }
+  }
+  // accordion menu
+  .vertical.menu:not(.submenu){
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+  .menu.nested {
+    margin: 0;
+  }
+  .is-accordion-submenu-parent > a {
+    padding-left: $global-padding + $global-padding - rem-calc(3px);// default + after padding - 1/2 after width
+  }
+  .is-accordion-submenu-parent > a::after {
+    display: inline-block;
+    position: relative;
+    right: -1*$global-padding;
+    border-color: $body-font-color transparent transparent;
+  }
+  // contact button
+  .contact {
+    background-color: $anchor-color;
+    margin-left: $global-padding;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: $anchor-color-hover;
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+  // logo
+  img.color-logo {
+    display: none;
+    transition: all 1s;
+  }
+  &.is-stuck .color-logo {
+    display: block;
+    height: 48px;
+  }
+  &.is-stuck .white-logo {
+    display: none;
+  }
+  .small-logo {
+    height: rem-calc(32px);
+  }
+}
+.admin-bar .title-bar.is-stuck {
+  @include breakpoint(medium) {
+    margin-top: 46px !important;
+  }
+  @include breakpoint(783px){
+    margin-top: 32px !important;
+  }
+}
+#large-menu {
+  width: 100%;
+  display: none;
+  @include breakpoint(medium) {
+    display: flex;
+  }
+}
+#small-menu-bar {
+  width: 100%;
+  @include breakpoint(medium){
+    display: none;
+  }
+}
+#small-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: $light-gray;
+}
