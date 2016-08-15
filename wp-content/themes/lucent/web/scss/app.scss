@@ -7,6 +7,7 @@
 @import "layout/header";
 @import "layout/call-to-action";
 @import "layout/footer";
+@import "layout/menu";
 
 @import "panels/icons";
 @import "panels/secondary-content";
@@ -17,5 +18,6 @@ h1, h2 {
 }
 
 h2+h4 {
-    margin-bottom: $global-margin*2;
+  margin-bottom: $global-margin*2;
+  font-weight: bold;
 }
