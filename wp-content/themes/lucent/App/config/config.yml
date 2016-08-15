@@ -6,7 +6,7 @@ parameters:
   twig.options:
     debug:            "%WP_DEBUG%"
     charset:          "utf-8"
-    cache:            "%template_dir%/var/twig"
+    cache:            false #"%template_dir%/var/twig"
     auto_reload:      "%WP_DEBUG%"
     strict_variables: "%WP_DEBUG%"
     autoescape:       false
@@ -99,7 +99,7 @@ services:
   twig.acf:
     class: "Supertheme\\WordPress\\Twig\\ACF"
   twig.wordpress:
-    class: "Supertheme\\WordPress\\Twig\\WordPRess"
+    class: "Supertheme\\WordPress\\Twig\\WordPress"
   twig.supertheme:
     class: "Supertheme\\WordPress\\Twig\\SuperTheme"
     arguments: ["@twig.acf", "@twig.wordpress"]
