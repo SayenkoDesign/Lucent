@@ -29,6 +29,13 @@ parameters:
     - { id: "app", source: "%template_uri%/web/stylesheets/app.css", deps: ["lato"] }
   wordpress.scripts:
     - { id: "app", source: "%template_uri%/web/scripts-min/app.min.js", deps: ['jquery'], header: false }
+  wordpress.post_types:
+    case_study:
+      public: true
+      labels: {name: "Case Studies", singular_name: "Case Study"}
+      menu_position: 6
+      menu_icon: "dashicons-portfolio"
+      supports: ["title", "editor", "author", "thumbnail", "excerpt"]
 
 services:
   # just the basics
