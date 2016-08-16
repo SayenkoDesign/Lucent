@@ -1,0 +1,21 @@
+.centered-content {
+  padding: $global-padding*4 0;
+  &.bg-image {
+    background-size: cover;
+    position: relative;
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($secondary-color, 0.5);
+      z-index: 0;
+    }
+    .row {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

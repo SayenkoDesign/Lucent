@@ -1,0 +1,9 @@
+<section class="centered-content bg-secondary text-center {% if SP.ACF.get_sub_field('background_image') %}bg-image{% endif %}"
+    {% if SP.ACF.get_sub_field('background_image') %}style="background-image: url('{{ SP.ACF.get_sub_field('background_image').url }}')"{% endif %}
+>
+    <div class="row">
+        <div class="small-12 columns">
+            {{ SP.ACF.get_sub_field('content') }}
+        </div>
+    </div>
+</section>
