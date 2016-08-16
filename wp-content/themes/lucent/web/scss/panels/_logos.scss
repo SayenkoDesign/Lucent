@@ -1,5 +1,8 @@
 .logos {
   padding: $global-padding*4 0;
+  img {
+    width: 100%;
+  }
   .small-up-3 {
     .column {
       height: rem-calc(200px);
