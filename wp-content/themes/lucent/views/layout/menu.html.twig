@@ -28,7 +28,7 @@
                     </a>
                 </div>
                 <div class="columns shrink">
-                    <a href="" class="phone"><i class="fa fa-phone"></i></a>
+                    <a href="tel:{{ SP.ACF.get_field('phone_number', 'option')|preg_replace('/[^0-9,]/', '') }}" class="phone"><i class="fa fa-phone"></i></a>
                     <a class="" data-toggle><i class="fa fa-bars"></i></a>
                 </div>
             </div>
