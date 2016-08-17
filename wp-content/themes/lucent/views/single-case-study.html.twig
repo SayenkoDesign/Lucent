@@ -1,0 +1,22 @@
+{% extends 'basic.html.twig' %}
+{% block header %}
+    {% include "layout/menu.html.twig" %}
+    {{ parent() }}
+    {% if SP.ACF.get_field('logo') %}
+        <section class="case-studies-header text-center">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="logo">
+                        <img src="{{ SP.ACF.get_field('logo').sizes.case_logo }}" alt="{{ SP.ACF.get_field('logo').title }}">
+                    </div>
+
+                    <div class="links">
+                        {{ previous }}
+                        {% if previous and next %}<span class="text-accent">|</span>{% endif %}
+                        {{ next }}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}
