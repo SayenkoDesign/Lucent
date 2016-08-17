@@ -11,11 +11,13 @@
         <div class="small-12 large-4 columns large-order-2">
             <div class="row">
                 <div class="shrink columns large-text-right">
-                    <a href="{{ SP.ACF.get_field('linkedin', 'option') }}"><i class="fa fa-linkedin"></i></a>
+                    <a href="{{ SP.ACF.get_field('linkedin', 'option') }}" target="_blank"><i class="fa fa-linkedin"></i></a>
                 </div>
                 <div class="shrink columns">
-                    {{ SP.ACF.get_field('address', 'option') }}<br />
-                    {{ SP.ACF.get_field('city', 'option') }}, {{ SP.ACF.get_field('state', 'option') }} {{ SP.ACF.get_field('zipcode', 'option') }}, USA
+                    <a href="{{ SP.ACF.get_field('google_maps_url') }}" target="_blank">
+                        {{ SP.ACF.get_field('address', 'option') }}<br />
+                        {{ SP.ACF.get_field('city', 'option') }}, {{ SP.ACF.get_field('state', 'option') }} {{ SP.ACF.get_field('zipcode', 'option') }}, USA
+                    </a>
                 </div>
             </div>
         </div>
