@@ -2,13 +2,14 @@
 {% block header %}
     {% include "layout/menu.html.twig" %}
     {{ parent() }}
-    {% if SP.ACF.get_field('logo') %}
-        <section class="case-studies-header text-center">
+        <section class="case-studies-header {% if SP.ACF.get_field('logo') %}has-logo{% endif %} text-center">
             <div class="row">
                 <div class="small-12 columns">
-                    <div class="logo">
-                        <img src="{{ SP.ACF.get_field('logo').sizes.case_logo }}" alt="{{ SP.ACF.get_field('logo').title }}">
-                    </div>
+                    {% if SP.ACF.get_field('logo') %}
+                        <div class="logo">
+                            <img src="{{ SP.ACF.get_field('logo').sizes.case_logo }}" alt="{{ SP.ACF.get_field('logo').title }}">
+                        </div>
+                    {% endif %}
 
                     <div class="links">
                         {{ previous }}
@@ -18,5 +19,4 @@
                 </div>
             </div>
         </section>
-    {% endif %}
 {% endblock %}

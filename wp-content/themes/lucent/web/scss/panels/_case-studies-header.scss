@@ -1,6 +1,8 @@
 .case-studies-header {
   position: relative;
-  margin-top: rem-calc(-38px) - $global-padding*2;
+  &.has-logo {
+    margin-top: rem-calc(-38px) - $global-padding*2;
+  }
   .logo {
     display: inline-block;
     padding: $global-padding*2;
@@ -10,11 +12,15 @@
     margin-bottom: $global-margin;
   }
   .links {
+    margin-top: $global-padding*4;
     a {
       font-size: rem-calc(18px);
     }
     span {
       padding: 0 $global-padding/2;
     }
+  }
+  &.has-logo .links {
+    margin-top: rem-calc(0);
   }
 }

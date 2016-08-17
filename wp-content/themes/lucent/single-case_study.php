@@ -13,7 +13,7 @@ ob_start();
 previous_post_link('%link', '&lt; Previous');
 $data['previous'] = ob_get_clean();
 ob_start();
-next_post_link('%link', 'Previous &gt;');
+next_post_link('%link', 'Next &gt;');
 $data['next'] = ob_get_clean();
 
 // render
