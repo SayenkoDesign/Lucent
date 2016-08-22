@@ -97,6 +97,7 @@ gulp.task('styles', function(){
             time:           options.styles.time
         }))
         .pipe(autoprefix('last 4 version'))
+        .pipe(concat('app.css'))
         .pipe(gulp.dest(options.styles.dist))
         .pipe(livereload());
 });
