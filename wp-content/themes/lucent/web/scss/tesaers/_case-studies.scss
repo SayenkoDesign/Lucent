@@ -1,0 +1,52 @@
+.teaser.case-study {
+  position: relative;
+  text-align: center;
+  margin-bottom: $global-margin;
+  @include breakpoint(medium) {
+    margin-bottom: map-get($grid-column-gutter, medium);
+  }
+  a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, 0.5);
+    &:hover {
+      background-color: rgba($anchor-color, 0.5);
+    }
+  }
+  img {
+    width: 100%;
+  }
+  h2, h4 {
+    color: $white;
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.case-studies {
+  .small-teasers {
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+  .medium-teasers {
+    display: none;
+    @include breakpoint(medium only) {
+      display: block;
+    }
+  }
+  .large-teasers {
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+    }
+  }
+}

@@ -15,6 +15,9 @@
 @import "panels/two-column";
 @import "panels/centered-content";
 @import "panels/case-studies-header";
+@import "panels/case-studies";
+
+@import "tesaers/case-studies";
 
 h1, h2 {
   color: $primary-color;
@@ -23,4 +26,35 @@ h1, h2 {
 h2+h4 {
   margin-bottom: $global-margin*2;
   font-weight: bold;
+}
+
+.slick-slider {
+  margin: 0 rem-calc(-1px);
+}
+.slick-slide {
+  height: auto;
+  margin: 0 rem-calc(2px);
+}
+.slick-prev, .slick-next {
+  background: none;
+  z-index: 1;
+  &::before {
+    content: " ";
+    display: block;
+    font-family: "FontAwesome";
+    font-size: 4rem;
+    color: $anchor-color;
+  }
+}
+.slick-prev {
+  left: 1rem;
+  &:before {
+    content: "\f104";
+  }
+}
+.slick-next {
+  right: 1rem;
+  &:before {
+    content: "\f105";
+  }
 }

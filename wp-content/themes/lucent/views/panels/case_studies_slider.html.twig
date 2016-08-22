@@ -1,0 +1,15 @@
+<div class="section case-slider">
+    <div class="slick">
+        {% for case_study in SP.ACF.get_sub_field('case_studies') %}
+            <div class="teaser case-study">
+                {{ SP.WordPress.featuredImage(case_study.case_study.ID, "case_slide") }}
+                <a href="{{ SP.WordPress.url(case_study.case_study.ID) }}">
+                    <div class="content">
+                        <h2>{{ SP.WordPress.title(case_study.case_study.ID) }}</h2>
+                        <h4>{{ SP.ACF.get_field('subtitle', case_study.case_study.ID) }}</h4>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

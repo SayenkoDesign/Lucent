@@ -1,0 +1,56 @@
+{% extends 'basic.html.twig' %}
+{% block content %}
+    {{ parent() }}
+    <section class="case-studies">
+        <div class="small-teasers">
+            <div class="row column">
+                {% for teaser in teasers %}
+                    <div class="item case-teaser">{{ teaser }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="medium-teasers">
+            <div class="row">
+                <div class="medium-6 columns">
+                    {% for teaser in teasers %}
+                        {% if loop.index % 2 %}
+                            <div class="item case-teaser">{{ teaser }}</div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="medium-6 columns">
+                    {% for teaser in teasers %}
+                        {% if not loop.index % 2 %}
+                            <div class="item case-teaser">{{ teaser }}</div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="large-teasers">
+            <div class="row">
+                <div class="large-4 columns">
+                    {% for teaser in teasers %}
+                        {% if loop.index % 3  == 1 %}
+                            <div class="item case-teaser">{{ teaser }}</div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="large-4 columns">
+                    {% for teaser in teasers %}
+                        {% if loop.index % 3 == 2 %}
+                            <div class="item case-teaser">{{ teaser }}</div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="large-4 columns">
+                    {% for teaser in teasers %}
+                        {% if loop.index % 3  == 0 %}
+                            <div class="item case-teaser">{{ teaser }}</div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -26,6 +26,7 @@ var options = {
             'web/libs/foundation-sites/dist/foundation.js',
             'web/libs/fancybox/source/jquery.fancybox.js',
             'web/libs/slick-carousel/slick/slick.js',
+            'web/libs/masonry/dist/masonry.pkgd.js',
             'web/scripts/app.js'
         ],
         dist: 'web/scripts-min'
