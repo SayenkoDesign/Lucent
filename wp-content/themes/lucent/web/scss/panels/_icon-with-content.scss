@@ -1,0 +1,7 @@
+.icon-with-content {
+  padding: $global-padding * 4 0;
+  font-size: $large-font-size;
+  .shrink img {
+    margin-top: rem-calc(12px);// to line up tops with heading in other column
+  }
+}

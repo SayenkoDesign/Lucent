@@ -1,0 +1,12 @@
+<section class="icon-with-content">
+    <div class="row">
+        <div class="shrink columns">
+            {% if SP.ACF.get_sub_field('icon') %}
+                <img src="{{ SP.ACF.get_sub_field('icon').url }}" alt="{{ SP.ACF.get_sub_field('icon').title }}">
+            {% endif %}
+        </div>
+        <div class="columns">
+            {{ SP.ACF.get_sub_field('content') }}
+        </div>
+    </div>
+</section>
