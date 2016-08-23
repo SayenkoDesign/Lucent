@@ -1,7 +1,3 @@
 section.case-studies {
-  padding: $global-padding * 4 0;
-
-  @include breakpoint(medium) {
-    padding-bottom: $global-padding * 4 - rem-calc(map-get($grid-column-gutter, medium));
-  }
+  padding: map-get($grid-column-gutter, medium) 0 0 ;
 }
