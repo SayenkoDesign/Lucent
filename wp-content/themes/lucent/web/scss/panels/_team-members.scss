@@ -1,0 +1,43 @@
+section.team-members {
+  padding: $global-padding * 4 0;
+  position: relative;
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $light-gray;
+    @include breakpoint(small only){
+      display: none;
+    }
+    @include breakpoint(medium){
+      height: rem-calc(300px);
+    }
+    @include breakpoint(large){
+      height: rem-calc(450px);
+    }
+  }
+  .content {
+    position: relative;
+  }
+  a {
+    float: right;
+  }
+  .fa {
+    font-size: rem-calc(16px);
+    padding: rem-calc(6px);
+    border: 3px solid $anchor-color;
+    border-radius: 100%;
+    position: relative;
+    top: rem-calc(8px);
+  }
+  .member {
+    position: relative;
+    margin-bottom: $global-margin;
+    img {
+      margin-bottom: $global-margin;
+    }
+  }
+}

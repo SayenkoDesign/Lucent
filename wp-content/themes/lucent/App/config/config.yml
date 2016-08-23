@@ -22,6 +22,7 @@ parameters:
     fullscreen: [1920, 1080, true]
     case_logo: [1200, 76, false]
     case_slide: [430, 315, true]
+    team_member: [660, 680, true]
   wordpress.menus:
     primary_menu: "Primary Menu"
   wordpress.sidebars:

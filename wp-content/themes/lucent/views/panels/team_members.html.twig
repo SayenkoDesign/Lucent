@@ -1,0 +1,21 @@
+<section class="team-members">
+    <div class="row column">
+        <div class="content">
+            {{ SP.ACF.get_sub_field('content') }}
+        </div>
+    </div>
+    <div class="row small-up-1 medium-up-3 ">
+        {% for member in SP.ACF.get_sub_field('member') %}
+            <div class="column member">
+                {% if member.image.url %}
+                    <img src="{{ member.image.sizes.team_member }}" alt="">
+                    <h2><a href="{{ member.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a> {{ member.name }}</h2>
+                    <h4>{{ member.position }}</h4>
+                    <div class="content">
+                        {{ member.description }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
