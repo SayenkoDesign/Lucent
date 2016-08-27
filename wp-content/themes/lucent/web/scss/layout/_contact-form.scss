@@ -1,0 +1,134 @@
+// fancybox
+.fancybox-close {
+  top: $global-padding !important;
+  right: $global-padding !important;
+  width: auto !important;
+  height: auto !important;
+  &::before {
+    content: " ";
+    width: rem-calc(41px);
+    height: rem-calc(40px);
+    background-image: url('../images/close.png');
+    display: block;
+  }
+  @include breakpoint(medium){
+    top: $global-padding*2 !important;
+    right: $global-padding*2 !important;
+
+  }
+  @include breakpoint(large){
+    top: $global-padding*10 !important;
+    right: $global-padding*10 !important;
+
+  }
+}
+.fancybox-overlay {
+  background-color: rgba($anchor-color, 0.8);
+}
+.fancybox-wrap {
+  left: auto !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 80% !important;
+}
+.fancybox-skin {
+  width: 100% !important;
+  background-color: $dark-gray;
+  min-height: 100%;
+  padding: $global-padding*4 $global-padding*2 $global-padding*2 $global-padding*2 !important;
+  @include breakpoint(medium){
+    padding: $global-padding*4 !important;
+  }
+  @include breakpoint(large){
+    padding: rem-calc($global-padding*15) rem-calc($global-padding*10) rem-calc($global-padding*15) !important;
+  }
+}
+.fancybox-inner {
+  width: 100% !important;
+  height: auto !important;
+}
+
+//content
+#contact-form {
+  display: none;
+  color: $white;
+  width: 100%;
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
+  h1 {
+    &::after {
+      margin: $global-margin*0.75;
+      content: " ";
+      display: block;
+      width: rem-calc(64px);
+      height: rem-calc(2px);
+      background-color: $anchor-color;
+    }
+  }
+}
+
+// gravity forms
+#contact-form {
+  .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+    display: none;
+  }
+  .gform_wrapper .gfield_required {
+    color: $white;
+  }
+  label {
+    color: $white;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  [type="text"], [type="password"], [type="date"], [type="datetime"], [type="datetime-local"], [type="month"], [type="week"],
+  [type="email"], [type="number"], [type="search"], [type="tel"], [type="time"], [type="url"], [type="color"], textarea {
+    border: 1px solid $anchor-color;
+    background-color: #2e2d2d;
+    color: $white;
+    transition: background-color 250ms;
+    &:focus {
+      box-shadow: none;
+      background-color: $black;
+    }
+  }
+  .button {
+    background-color: $anchor-color;
+    &:hover {
+      background-color: $anchor-color-hover;
+    }
+  }
+  // errors
+  .gform_wrapper div.validation_error {
+    margin-top: $global-margin * 2;
+    border-color: map-get($foundation-palette, alert);
+    color: map-get($foundation-palette, alert);
+    font-weight: normal;
+  }
+  .gform_wrapper .validation_message {
+    color: map-get($foundation-palette, alert);
+  }
+  .gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    border: none;
+    background-color: transparent;
+    padding-top: 0;
+  }
+  .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+    margin-top: 8px;
+  }
+  .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+    margin-top: 0;
+  }
+  body .gform_wrapper .top_label div.ginput_container {
+    margin-top: 8px;
+  }
+  .gform_wrapper .field_description_below .gfield_description {
+    padding-top: 0;
+  }
+  // ocnfirmation
+  .gforms_confirmation_message {
+    font-size: rem-calc(36px);
+    color: $anchor-color;
+  }
+}
