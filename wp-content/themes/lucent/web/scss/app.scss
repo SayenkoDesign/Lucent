@@ -42,6 +42,8 @@ h2+h4 {
 .slick-prev, .slick-next {
   background: none;
   z-index: 1;
+  width: auto;
+  height: auto;
   &::before {
     content: " ";
     display: block;
