@@ -47,11 +47,21 @@
   }
   //drop down menu
   .dropdown.menu li.is-dropdown-submenu-parent > a::after {
-    border-color: $white transparent transparent;
+    color: $white;
+    text-decoration: none;
+    position: relative;
+    top: 2px;
+    border: none;
+    content: "\f107";
+    font-family: "FontAwesome";
+    padding-left: rem-calc(16px);
   }
 
   &.is-stuck .dropdown.menu li.is-dropdown-submenu-parent > a::after {
-    border-color: $body-font-color transparent transparent;
+    color: $body-font-color;
+  }
+  .dropdown a:hover {
+    text-decoration: none;
   }
   .submenu {
     background-color: $light-gray;
@@ -62,6 +72,7 @@
       padding: $global-padding $global-padding*1.5;
       &:hover {
         color: $anchor-color-hover;
+        text-decoration: underline;
       }
     }
   }
@@ -76,13 +87,19 @@
     margin: 0;
   }
   .is-accordion-submenu-parent > a {
-    padding-left: $global-padding + $global-padding - rem-calc(3px);// default + after padding - 1/2 after width
+    padding-left: $global-padding + rem-calc(32px);// default + after padding - 1/2 after width
   }
   .is-accordion-submenu-parent > a::after {
     display: inline-block;
     position: relative;
-    right: -1*$global-padding;
-    border-color: $body-font-color transparent transparent;
+    top: 2px;
+    border: none;
+    content: "\f107";
+    font-family: "FontAwesome";
+    padding-left: rem-calc(32px);
+  }
+  .is-accordion-submenu-parent[aria-expanded="true"] > a::after {
+    transform: none;
   }
   // contact button
   .contact {
