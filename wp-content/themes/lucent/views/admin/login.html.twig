@@ -1,0 +1,15 @@
+<style type="text/css">
+    h1 a {
+        background-size: contain !important;
+        width: 320px !important;
+        height: 120px !important;
+
+        {% if SP.ACF.get_field('color_logo', 'option') %}
+            background-image: url('{{ SP.ACF.get_field('color_logo', 'option').url }}') !important;
+        {% elseif SP.ACF.get_field('white_logo', 'option') %}
+            background-image: url('{{ SP.ACF.get_field('white_logo', 'option').url }}') !important;
+        {% elseif SP.ACF.get_field('mobile_logo', 'option') %}
+            background-image: url('{{ SP.ACF.get_field('mobile_logo', 'option').url }}') !important;
+        {% endif %}
+    }
+</style>
