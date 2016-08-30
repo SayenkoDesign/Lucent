@@ -10,7 +10,7 @@ jQuery(function() {
             settings: {
                 slidesToShow: 1,
                 centerMode: true
-            },
+        }}, {
             breakpoint: 1024,
             settings: {
                 slidesToShow: 2,
