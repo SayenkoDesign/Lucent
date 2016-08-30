@@ -12,8 +12,9 @@
     left: 0;
     right: 0;
     background-color: rgba($black, 0.5);
+    transition: background-color 500ms;
     &:hover {
-      background-color: rgba($white, 0.5);
+      background-color: rgba(black, 0.8);
     }
   }
   img {
@@ -21,6 +22,17 @@
   }
   h2, h4 {
     color: $white;
+  }
+  h2 {
+    @include breakpoint(small only) {
+      font-size: map-get(map-get($header-sizes, small), h2) *0.75;
+    }
+  }
+  h4 {
+    display: none;
+    @include breakpoint(medium) {
+      display: block;
+    }
   }
   .content {
     padding: $global-padding*2;
