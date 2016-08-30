@@ -1,4 +1,14 @@
 {% extends 'base.html.twig' %}
+{% block meta %}
+    {{ parent() }}
+    {% if SP.ACF.get_field('favicon', 'option') %}
+        <link rel="shortcut icon" type="image/png" href="{{ SP.ACF.get_field('favicon', 'option').url }}"/>
+    {% elseif SP.ACF.get_field('mobile_logo', 'option') %}
+        <link rel="shortcut icon" type="image/png" href="{{ SP.ACF.get_field('mobile_logo', 'option').url }}"/>
+    {% elseif SP.ACF.get_field('color_logo', 'option') %}
+        <link rel="shortcut icon" type="image/png" href="{{ SP.ACF.get_field('color_logo', 'option').url }}"/>
+    {% endif %}
+{% endblock %}
 {% block header %}
     {% include "layout/menu.html.twig" %}
     {{ parent() }}
