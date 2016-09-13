@@ -30,7 +30,10 @@
   right: 0 !important;
   top: 0 !important;
   bottom: 0 !important;
-  width: 80% !important;
+  width: 100% !important;
+  @include breakpoint(medium) {
+    width: 80% !important;
+  }
 }
 .fancybox-skin {
   width: 100% !important;
@@ -54,6 +57,11 @@
   display: none;
   color: $white;
   width: 100%;
+  .content {
+    @include breakpoint(small only){
+      display: none;
+    }
+  }
   h1, h2, h3, h4, h5, h6 {
     color: $white;
   }

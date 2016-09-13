@@ -1,6 +1,9 @@
 <div id="contact-form-wrapper">
     <div id="contact-form">
-        {{ SP.ACF.get_field('contact_lightbox', 'option') }}
+        <div class="content">
+            {{ SP.ACF.get_field('contact_lightbox', 'option') }}
+        </div>
+        {{ SP.WordPress.getForm(SP.ACF.get_field('lightbox_form', 'option')) }}
     </div>
 </div>
 <section class="call-to-action" style="background-image: url('{{ SP.ACF.get_field('call_to_action_background', 'option').url }}')">
