@@ -18,5 +18,4 @@ $twig = $container->get('twig.environment');
 $twig->addGlobal('url', get_site_url());
 $twig->addGlobal('walkers', [
     'dropdown' => new \Supertheme\WordPress\DropDownMenuWalker(),
-    'accordion' => new \Supertheme\WordPress\AccordionMenuWalker(),
 ]);
