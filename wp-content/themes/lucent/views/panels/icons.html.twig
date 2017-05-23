@@ -7,7 +7,7 @@
     </div>
     <div class="row">
         {% for icon in SP.ACF.get_sub_field('icons') %}
-            <div class="small-12 medium-4 columns">
+            <div class="small-12 medium-3 columns">
                 <a href="{{ icon.url }}" class="icon">
                     <img src="{{ icon.image.url }}" alt="{{ icon.title }}">
                     <h3>{{ icon.title }}</h3>
